@@ -188,10 +188,7 @@ ON users.id = tokens.user_id
 WHERE tokens.hash = $1
 AND tokens.scope = $2
 AND tokens.expiry > $3`
-	// Create a slice containing the query arguments. Notice how we use the [:] operator
-	// to get a slice containing the token hash, rather than passing in the array (which
-	// is not supported by the pq driver), and that we pass the current time as the
-	// value to check against the token expiry.
+	
 	args := []any{tokenHash[:], tokenScope, time.Now()}
 	var user User
 	ctx, cancel := context.WithTimeout(context.Background(), 3*time.Second)
