@@ -1,5 +1,3 @@
-# animelist
-# animelist
 # animelist api
 A RESTful JSON API for managing an anime watchlist - built in Go
 Users can register, activate their accounts, and manage their anime collection with full CRUD operations, filtering, sorting, pagination, token-based authentication with fine-grained permissions.
@@ -30,8 +28,8 @@ Users can register, activate their accounts, and manage their anime collection w
 - `curl` (for the endpoints)
 - `make` (optional, for Makefile targets)
 
-Configurations
-Flag                            Default
+## Configurations
+                        
 -port                           4000
 -env                            development
 -db-dsn                         -
